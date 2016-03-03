@@ -1,0 +1,6 @@
+<h2><a href="" {{action "toggleList"}}>{{title}} {{#if show}}-{{else}}+{{/if}}</a></h2>
+{{#if show}}
+  <ol class="toc">
+    {{yield}}
+  </ol>
+{{/if}}

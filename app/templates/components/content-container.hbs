@@ -1,0 +1,10 @@
+<div class="item">
+  {{#if contract}}
+    {{vertical-title title=title contractCard="contractCard"}}
+  {{else}}
+  {{#content-card content="content" title=title contractCard="contractCard"}}
+    {{yield}}
+  {{/content-card}}
+  {{bookmark-add-remove title=title route=route}}
+  {{/if}}
+</div>

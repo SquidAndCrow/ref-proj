@@ -6,6 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('swd', function() {
+    this.route('race', function() {
+      this.route('android');
+      this.route('atlantean');
+    });
+    this.route('traits');
+  });
 });
 
 export default Router;

@@ -1,0 +1,16 @@
+{{#if showBookmarks}}
+<div class="item">
+  <div class="content scroll-pane">
+    <h1>Bookmarks</h1>
+    <ul class="bookmarks">
+    {{#if sortedContent}}
+    {{#each sortedContent as |bookmark|}}
+      <li><a href="" {{action "closeBookmarks" bookmark.route}}>{{bookmark.title}}</a></li>
+    {{/each}}
+    {{else}}
+      <p>No bookmarks here!</p>
+    {{/if}}
+    </ul>
+  </div>
+</div>
+{{/if}}

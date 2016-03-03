@@ -1,0 +1,15 @@
+<div class="menu">
+  {{#link-to 'index'}}<i class="fa fa-bars"></i>{{/link-to}}
+  <hr>
+  <i class="fa fa-search"></i>
+  <hr>
+  {{#if showBookmarks}}
+  <a href="" {{action "closeBookmarks"}}><i class="fa fa-bookmark"></i></a>
+  {{else}}
+  <a href="" {{action "openBookmarks"}}><i class="fa fa-bookmark"></i></a>
+  {{/if}}
+</div>
+<div class="container">
+  {{bookmark-list bookmarks=bookmarks showBookmarks=showBookmarks closeBookmarks=(action "closeBookmarks")}}
+  {{outlet}}
+</div>

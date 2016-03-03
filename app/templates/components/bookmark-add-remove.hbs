@@ -1,0 +1,7 @@
+<div class="bookmark">
+  {{#if isBookmarked}}
+    <a href="" {{action "removeBookmark" route}}><i class="fa fa-bookmark bookmarked"></i></a>
+  {{else}}
+    <a href="" {{action "addBookmark" title route}}><i class="fa fa-bookmark"></i></a>
+  {{/if}}
+</div>

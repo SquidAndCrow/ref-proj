@@ -5,6 +5,7 @@
 @import "scroll";
 
 $font-color: #493e3e;
+$font-color-over: #d37f7a;
 a:-webkit-any-link {
   text-decoration: none;
 }
@@ -52,8 +53,9 @@ li {
 }
 
 ul.bookmarks li {
-  &.link:hover, &.active {
-    background-color: inherit;
+  width: 90%;
+  &:hover, &.active {
+    background-color: #eee8e8;
     border-right: 0;
     cursor: pointer;
   }
@@ -61,8 +63,10 @@ ul.bookmarks li {
 
 a {
   color: $font-color;
+  text-decoration: none;
+
   &:hover {
-    text-decoration: none;
+    color: $font-color-over;
   }
   .active {
     text-decoration: none;
@@ -164,5 +168,8 @@ hr {
       color: #564a4b;
     }
   }
+}
 
+.align-right {
+  float: right;
 }

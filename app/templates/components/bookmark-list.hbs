@@ -5,7 +5,7 @@
     <ul class="bookmarks">
     {{#if sortedContent}}
     {{#each sortedContent as |bookmark|}}
-      <li><a href="" {{action "closeBookmarks" bookmark.route}}>{{bookmark.title}}</a><span class="align-right"><a href="" {{action "removeBookmark" bookmark.route}}>X</a></span></li>
+      <li><a href="{{route-to-path bookmark.route}}" {{action "closeBookmarks" bookmark.route}}>{{bookmark.title}}</a><span class="align-right"><a href="" {{action "removeBookmark" bookmark.route}}>X</a></span></li>
     {{/each}}
     {{else}}
       <p>No bookmarks here!</p>
